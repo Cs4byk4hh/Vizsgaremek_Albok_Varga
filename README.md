@@ -1,0 +1,2 @@
+# Vizsgaremek_Albok_Varga_Gyarmati
+Vizsgaremek
