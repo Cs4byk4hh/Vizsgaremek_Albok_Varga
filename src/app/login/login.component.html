@@ -1,0 +1,21 @@
+
+
+<main>
+  <div class="parent">
+  <div class="child">
+    <form (ngSubmit)="login()">
+      <fieldset>
+        <legend>Bejelentkezés</legend>
+        <label for="email">Email cím:</label>
+        <input type="email" name="email" [(ngModel)]="email" required>
+        <br>
+        <label for="password">Jelszó:</label>
+        <input type="password" name="password" [(ngModel)]="password" required>
+          <div class="button">
+             <input type="submit" value="Bejelentkezés">
+          </div>
+      </fieldset>
+    </form>
+  </div>
+</div>
+</main>
