@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 export class RegisterComponent {
   name: string = "";
   email: string = "";
+  username: string = "";
   password: string = "";
 
   constructor(private http: HttpClient) {}
@@ -21,20 +22,19 @@ export class RegisterComponent {
     const regisztracio = {
       name: this.name,
       email: this.email,
+      username: this.username,
       password: this.password
     };
 
-    this.http.post('http://localhost:3000/register', regisztracio)
-      .subscribe({
-        next: (res) => {
-          console.log("Sikeres regisztráció!");
-          this.name = '';
-          this.email = '';
-          this.password = '';
-        },
-        error: (err) => {
-          console.error("Hiba a regisztráció során!", err);
-        }
+     this.http.post('http://localhost:3000/register', regisztracio) 
+      .subscribe(res => {
+        console.log("Sikeres regisztráció!");
+        this.name = '';
+        this.email = '';
+        this.username = '';
+        this.password = '';
+      }, error => {
+        console.error("Hiba a regisztráció során!", error);
       });
   }
 }
