@@ -1,0 +1,32 @@
+<main>
+  <div class="parent">
+  <div class="child">
+    <form (ngSubmit)="register()">
+      <fieldset>
+        <legend>Regisztráció</legend>
+
+        <label for="name">Teljes név: </label>
+        <input type="text" name="name" [(ngModel)]="name" required>
+        <br>
+
+        <label for="email">Email cím: </label>
+        <input type="email" name="email" [(ngModel)]="email" required>
+        <br>
+
+        <label for="username">Felhasználónév:</label>
+        <input type="text" name="username" [(ngModel)]="username" required>
+        <br>
+
+        <label for="password">Jelszó: </label>
+        <input type="password" name="password" [(ngModel)]="password">
+
+           <div class="center">
+            <input type="submit" value="Regisztráció" (click)="register()">
+          </div>
+      </fieldset>
+    </form>
+
+   
+  </div>
+</div>
+</main>
