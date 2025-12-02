@@ -89,7 +89,7 @@ app.post('/register', async (req, res) => {
     if (!name || !email || !username || !password) {
         return res.status(401).json({message: 'Hiányzó adat!'});
     }
-    const letezousername = felhasznalok.findOne({where: {username}});
+    const letezousername = await felhasznalok.findOne({where: {username}});
     if (letezousername) {
         return res.status(404).json({message: 'Ezzel a felhasználó névvel már regisztráltak!'})
     }
@@ -120,7 +120,7 @@ app.post('/login', async (req, res) => {
     if (!letezofelhasznalo) {
         return res.status(404).json({message: 'Nem létezik ilyen felhasználó!'});
     }
-    const validjelszo = bcrypt.compare(password, letezofelhasznalo.password);
+    const validjelszo = await bcrypt.compare(password, letezofelhasznalo.password);
     if (!validjelszo) {
         return res.status(401).json({message: 'Hibás jelszó!'})
     }
@@ -175,4 +175,5 @@ const authenticationtoken = (req, res, next) => {
 }
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
+
 });
