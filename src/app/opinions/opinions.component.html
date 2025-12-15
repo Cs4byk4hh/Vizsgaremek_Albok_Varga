@@ -1,0 +1,15 @@
+<nav>
+    <button mat-flat-button (click)="kijelentkezes()">Kijelentkezés</button>
+</nav>
+
+
+<form [formGroup]="myForm">
+    <textarea formControlName="opinion" placeholder="Enter your opinion about the product"></textarea>
+    <button mat-raised-button (click)="kuldes()">Vélemény Küldés</button>
+</form>
+
+<div *ngIf="submittedOpinion && submittedUser">
+    <h3>Beküldött Vélemény:</h3>
+    <p><strong>Felhasználónév:</strong> {{ submittedUser }}</p>
+    <p><strong>Vélemény:</strong> {{ submittedOpinion }}</p>
+</div>
