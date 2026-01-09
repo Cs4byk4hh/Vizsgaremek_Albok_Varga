@@ -1,0 +1,24 @@
+<nav>
+  <button mat-flat-button (click)="kijelentkezes()">Kijelentkezés</button>
+</nav>
+
+<form [formGroup]="myForm">
+  <textarea formControlName="opinion" placeholder="Enter your opinion about the product"></textarea>
+  <button mat-raised-button type="button" (click)="kuldes()">Vélemény Küldés</button>
+</form>
+
+<div *ngIf="submittedOpinions.length > 0" class="opinion-container">
+  <h3>Beküldött Vélemények:</h3>
+  <div *ngFor="let opinion of submittedOpinions; let i = index">
+    <p><strong>Felhasználónév:</strong> {{ opinion.userName }}</p>
+    <p><strong>Vélemény:</strong> {{ opinion.opinion }}</p>
+    <div class="mat-container">
+      <button matFab class="custom-delete" (click)="deleteOpinion(opinion.id)">
+        <mat-icon>delete</mat-icon>
+      </button>
+      <button mat-icon-button color="primary" class="edit" (click)="editOpinion(i)">
+        <mat-icon>edit</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
