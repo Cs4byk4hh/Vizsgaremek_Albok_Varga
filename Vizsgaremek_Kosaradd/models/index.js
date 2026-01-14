@@ -10,9 +10,10 @@ module.exports = {
     felhasznalok,
     velemenyek,
     perfumes,
-    kosar
-
+    kosar,
+    kosar_tartalom
 };
+
 
 
 
