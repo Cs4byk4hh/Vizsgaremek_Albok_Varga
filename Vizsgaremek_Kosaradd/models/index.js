@@ -9,8 +9,10 @@ module.exports = {
     sequelize,
     felhasznalok,
     velemenyek,
-    perfumes
+    perfumes,
+    kosar
 
 };
+
 
 
