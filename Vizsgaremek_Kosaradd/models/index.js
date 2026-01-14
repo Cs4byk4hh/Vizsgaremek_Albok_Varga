@@ -3,7 +3,6 @@ const felhasznalok = require('./felhasznalok');
 const velemenyek = require('./velemenyek');
 const perfumes = require('./perfumes');
 const kosar = require('./kosar');
-
 module.exports = {
     sequelize,
     felhasznalok,
@@ -11,3 +10,4 @@ module.exports = {
     perfumes
 
 };
+
