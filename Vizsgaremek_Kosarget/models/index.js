@@ -5,6 +5,9 @@ const perfumes = require('./perfumes');
 const kosar_tartalom = require('./kosar_tartalom');
 const kosar = require('./kosar');
 
+kosar_tartalom.belongsTo(parfumok, { foreignKey: 'parfum_id' });
+
+
 module.exports = {
     sequelize,
     felhasznalok,
@@ -12,4 +15,5 @@ module.exports = {
     perfumes,
     kosar_tartalom,
     kosar
+
 };
