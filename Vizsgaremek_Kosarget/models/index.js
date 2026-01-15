@@ -5,7 +5,8 @@ const perfumes = require('./perfumes');
 const kosar_tartalom = require('./kosar_tartalom');
 const kosar = require('./kosar');
 
-kosar_tartalom.belongsTo(parfumok, { foreignKey: 'parfum_id' });
+kosar_tartalom.belongsTo(perfumes, { foreignKey: 'parfum_id' });
+velemenyek.belongsTo(felhasznalok, { foreignKey: 'user_id' });
 
 
 module.exports = {
@@ -17,3 +18,4 @@ module.exports = {
     kosar
 
 };
+
