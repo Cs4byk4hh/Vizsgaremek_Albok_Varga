@@ -65,6 +65,10 @@ const velemenyek = sequelize.define('velemenyek', {
         type: DataTypes.TEXT,
         allowNull: false
     },
+    user_id: {
+        type: DataTypes.INTEGET,
+        allowNull: false
+    },
     userName: {
         type: DataTypes.STRING,
         allowNull: false
@@ -307,4 +311,5 @@ app.put('/velemenyek/:id', async (req, res) => {
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
+
 });
