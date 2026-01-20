@@ -1,9 +1,0 @@
-<div class="card" *ngFor="let perfume of perfumes" style="width: 14rem; margin-bottom: 1rem;">
-    <img src="assets/images/Alchemie.jpg" alt="">
-  <div class="card-body">
-    <h5 class="card-title">{{ perfume.name }}</h5>
-    <p class="card-text">{{ perfume.brand }} - {{ perfume.volume_ml }} ml</p>
-    <p class="card-text">Illatjegyek: {{ perfume.sweet ? 'Édes ' : '' }}{{ perfume.spicy ? 'Fűszeres' : '' }}</p>
-    <p class="card-text fw-bold">Ár: {{ perfume.price }} Ft</p>
-  </div>
-</div>
