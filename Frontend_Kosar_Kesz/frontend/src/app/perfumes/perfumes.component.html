@@ -1,0 +1,19 @@
+
+<button mat-icon-button color="primary" (click)="openCart()">
+  <mat-icon>shopping_cart</mat-icon>
+</button>
+
+
+
+<div class="card-container">
+  <div class="card" *ngFor="let perfume of perfumes" style="width: 14rem; margin-bottom: 1rem;">
+  <img [src]="getImagePath(perfume.name)" alt="{{ perfume.name }}">
+  <div class="card-body">
+    <h5 class="card-title">{{ perfume.name }}</h5>
+    <p class="card-text">{{ perfume.brand }} - {{ perfume.volume_ml }} ml</p>
+    <p class="card-text">Illatjegyek: {{ perfume.sweet ? 'Édes ' : '' }}{{ perfume.spicy ? 'Fűszeres' : '' }}</p>
+    <p class="card-text fw-bold">Ár: {{ (+perfume.price) * 1000 | number:'1.0-0'}} Ft</p>
+    <button mat-raised-button color="primary" (click)="addToCart(perfume)">Kosárba</button>
+  </div>
+</div>
+</div>
