@@ -11,11 +11,6 @@ const kosar_tartalom = sequelize.define('kosar_tartalom', {
     kosar_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        references: {
-            model: 'kosars',
-            key: 'id'
-        },
-        onDelete: 'CASCADE'
     },
     parfum_id: {
         type: DataTypes.INTEGER,
@@ -31,5 +26,6 @@ const kosar_tartalom = sequelize.define('kosar_tartalom', {
         allowNull: false
     }
 });
+
 
 module.exports = kosar_tartalom;
