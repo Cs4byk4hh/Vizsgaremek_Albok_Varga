@@ -23,12 +23,13 @@ async function seedAdmins() {
         const exists = await felhasznalok.findOne({where: { email: admin.email }});
         if (!exists) {
             await felhasznalok.create(admin);
+            console.log("Adminok létrehozva!");
         }
 
-        console.log("Adminok létrehozva!");
         
     }
 }
+
 
 
 module.exports = seedAdmins;
