@@ -1,0 +1,51 @@
+<button mat-icon-button color="primary" (click)="openCart()">
+  <mat-icon>shopping_cart</mat-icon>
+</button>
+
+<div class="search-container">
+  <div class="search-box">
+    <mat-icon>search</mat-icon>
+    <input type="text" placeholder="Keresés parfüm vagy márka alapján..." [(ngModel)]="searchTerm">
+    
+    <mat-icon *ngIf="searchTerm" (click)="searchTerm = ''" class="clear-icon">close</mat-icon>
+  </div>
+</div>
+
+<div class="card-container">
+  <div class="card" *ngFor="let perfume of filteredPerfumes">
+    <img [src]="getImagePath(perfume.name)" alt="{{ perfume.name }}">
+    <div class="card-body">
+      <h5 class="card-title">{{ perfume.name }}</h5>
+      <p class="card-text">{{ perfume.brand }} - {{ perfume.volume_ml }} ml</p>
+      <p class="card-text">Illatjegyek: {{ perfume.sweet ? 'Édes ' : '' }}{{ perfume.spicy ? 'Fűszeres' : '' }}</p>
+      <p class="card-text">{{ perfume.gender }}</p>
+      <p class="card-text fw-bold">Ár: {{ (+perfume.price) * 1000 | number:'1.0-0'}} Ft</p>
+      <button mat-raised-button color="primary" (click)="addToCart(perfume)">Kosárba</button>
+    </div>
+  </div>
+  
+  <div *ngIf="filteredPerfumes.length === 0 && perfumes.length > 0" class="no-results">
+    <p>Nincs találat erre: "{{ searchTerm }}"</p>
+  </div>
+</div>
+
+<footer class="modern-footer">
+  <div class="footer-container">
+    <div class="footer-col brand-col">
+      <h3>Maison de Parfum</h3>
+      <p>Az emlékek illatokban élnek tovább. Fedezd fel a prémium parfümök világát, ahol a minőség találkozik az eleganciával.</p>
+    </div>
+    <div class="footer-col subscribe-col">
+      <div class="contact-row">
+        <span>info&#64;maisonparfum.hu</span> 
+      </div>
+       </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Maison de Parfum. Minden jog fenntartva.</p>
+    <div class="payment-methods">
+      <span>Adatvédelem</span>
+      <span>Süti beállítások</span>
+    </div>
+  </div>
+</footer>
