@@ -1,0 +1,146 @@
+:root {
+  --gold-primary: #d4af37;       
+  --gold-light: #f3e5ab;         
+  --text-dark: #1a1a1a;          
+  --text-grey: #666666;          
+  --bg-soft: #f9f9f9;            
+  --card-bg: #ffffff;
+  --input-radius: 8px;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 85vh; 
+  background: linear-gradient(135deg, #fdfbf7 0%, #f4f4f4 100%); 
+  padding: 20px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.profile-card {
+  width: 100%;
+  max-width: 480px;
+  padding: 30px; 
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08); 
+  background-color: var(--card-bg);
+  border: 1px solid rgba(0,0,0,0.02);
+}
+
+.elegant-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.elegant-header mat-card-title {
+  font-size: 26px;
+  font-weight: 300; 
+  color: var(--text-dark);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.elegant-header mat-card-subtitle {
+  font-size: 14px;
+  color: var(--gold-primary);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.user-info-box {
+  background: linear-gradient(to right, #fafafa, #ffffff);
+  border: 1px solid #e0e0e0;
+  border-left: 4px solid var(--gold-primary); 
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.box-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  color: var(--gold-primary);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-item.full-width {
+  grid-column: span 2;
+}
+
+.info-item .label {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 4px;
+}
+
+.info-item .value {
+  font-size: 15px;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.edit-section h3 {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0 0 5px 0;
+  color: var(--text-dark);
+}
+
+.hint-text {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.luxury-input {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center; 
+  margin-top: 25px;
+}
+
+.save-btn {
+  background-color: var(--text-dark) !important; 
+  color: #000 !important;
+  padding: 0 40px;
+  height: 50px;
+  border-radius: 25px; 
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.save-btn:hover {
+  background-color: var(--gold-primary) !important; 
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}

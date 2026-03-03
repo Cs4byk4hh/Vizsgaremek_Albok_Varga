@@ -1,0 +1,70 @@
+<div class="profile-container perfume-theme">
+  <mat-card class="profile-card">
+    
+    <mat-card-header class="elegant-header">
+      <mat-card-title>Fiók beállítások</mat-card-title>
+      <mat-card-subtitle>Személyes adatok áttekintése</mat-card-subtitle>
+    </mat-card-header>
+    
+    <mat-card-content>
+      
+      <div class="user-info-box">
+        <div class="box-header">
+          <mat-icon>verified_user</mat-icon>
+          <span>Jelenlegi profil</span>
+        </div>
+
+        <div class="info-grid">
+          <div class="info-item">
+            <span class="label">Név</span>
+            <span class="value">{{ user.name }}</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Felhasználónév</span>
+            <span class="value">{{ user.username }}</span>
+          </div>
+          <div class="info-item full-width">
+            <span class="label">Email cím</span>
+            <span class="value">{{ user.email }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="spacer"></div>
+
+      <div class="edit-section">
+        <h3>Adatok módosítása</h3>
+        <p class="hint-text">Frissítse adatait az alábbi mezőkben:</p>
+        
+        <form (ngSubmit)="saveProfile()">
+          
+          <mat-form-field appearance="outline" class="luxury-input">
+            <mat-label>Új név</mat-label>
+            <input matInput [(ngModel)]="editUser.name" name="name" required>
+            <mat-icon matSuffix>badge</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="luxury-input">
+            <mat-label>Új felhasználónév</mat-label>
+            <input matInput [(ngModel)]="editUser.username" name="username" required>
+            <mat-icon matSuffix>person</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="luxury-input">
+            <mat-label>Új email cím</mat-label>
+            <input matInput [(ngModel)]="editUser.email" name="email" type="email" required>
+            <mat-icon matSuffix>alternate_email</mat-icon>
+          </mat-form-field>
+
+          <div class="actions">
+            <button mat-raised-button type="submit" class="save-btn">
+              MENTÉS
+            </button>
+          </div>
+
+        </form>
+      </div>
+
+    </mat-card-content>
+  </mat-card>
+</div>

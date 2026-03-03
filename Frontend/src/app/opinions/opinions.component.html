@@ -1,0 +1,63 @@
+<nav>
+  <button mat-flat-button (click)="kijelentkezes()">Kijelentkezés</button>
+</nav>
+
+<form [formGroup]="myForm">
+  <textarea formControlName="opinion" placeholder="Enter your opinion about the product"></textarea>
+  <button mat-raised-button type="button" (click)="kuldes()">Vélemény Küldés</button>
+</form>
+
+<div *ngIf="submittedOpinions.length > 0" class="opinion-container">
+  <h3>Beküldött Vélemények:</h3>
+  <div *ngFor="let opinion of submittedOpinions; let i = index">
+    <p><strong>Felhasználónév:</strong> {{ opinion.username }}</p>
+    <p><strong>Vélemény:</strong> {{ opinion.opinion }}</p>
+    <div class="mat-container">
+      <button matFab class="custom-delete" (click)="deleteOpinion(opinion.id)">
+        <mat-icon>delete</mat-icon>
+      </button>
+      <button mat-icon-button color="primary" class="edit" (click)="editOpinion(i)">
+        <mat-icon>edit</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
+
+<footer class="modern-footer">
+  <div class="footer-container">
+    
+    <div class="footer-col brand-col">
+      <h3>Maison de Parfum</h3>
+      <p>Az emlékek illatokban élnek tovább. Fedezd fel a prémium parfümök világát, ahol a minőség találkozik az eleganciával.</p>
+    </div>
+
+
+    <div class="footer-col subscribe-col">
+      <h4>Maradjunk kapcsolatban</h4>
+      <p>Iratkozz fel, és értesülj elsőként az újdonságokról.</p>
+      
+      <div class="newsletter-box">
+        <input type="email" placeholder="Email címed...">
+        <button>→</button>
+      </div>
+
+      <div class="contact-row">
+        <span>info&#64;maisonparfum.hu</span> </div>
+
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 Maison de Parfum. Minden jog fenntartva.</p>
+    <div class="payment-methods">
+      <span>Adatvédelem</span>
+      <span>Süti beállítások</span>
+    </div>
+  </div>
+</footer>
