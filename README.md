@@ -1,4 +1,4 @@
-#1.Témaválasztás indoklása
+# 1.Témaválasztás indoklása
 
 A Maison De Parfum kizárólag parfümöket árusító webshop létrehozása több szempontból is
 indokolt és üzletileg megalapozott döntés lehet. A parfümök piaca egy jól körülhatárolható,
