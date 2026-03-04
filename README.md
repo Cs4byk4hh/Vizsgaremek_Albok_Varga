@@ -145,6 +145,7 @@ visszajelzések.
 
 
 6.Szoftvertesztelés
+
 Bevezetés és Tesztelési Stratégia
 A dokumentáció ezen része a Maison de Parfum webes alkalmazás minőségbiztosítási folyamatait és tesztelési eredményeit foglalja össze. A rendszer egy elosztott architektúrára épül, amely egy Node.js/Express backendből (Sequelize ORM és MySQL adatbázissal) és egy Angular alapú frontend kliensből áll.
 A tesztelési stratégia célja a rendszer stabilitásának, biztonságának és felhasználói élményének biztosítása volt. A fejlesztés során a „Shift Left” megközelítést alkalmaztuk, ahol a tesztelés a fejlesztéssel párhuzamosan zajlott. A tesztelések során négy fő 
