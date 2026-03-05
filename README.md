@@ -154,3 +154,173 @@ módszertant alkalmaztunk:
 2.	Integrációs tesztelés: A frontend-backend és az adatbázis kapcsolatának vizsgálata.
 3.	Fehér dobozos tesztelés (White-box): A belső kódszerkezet és logika elemzése.
 4.	Fekete dobozos tesztelés (Black-box): A pontos működés vizsgálata felhasználói szemszögből.
+
+# 7.Rendszerkövetelmények
+
+A Maison De Parfum egy egyszeű webshop, így a futtatásához nincsen szükség speciális helyi hardvereszközökre. 
+
+# 8.Hardverkövetelmények
+
+ Alapfeltételek: 
+ a projekt Node.js-alapú backend-et (`express`, `sequelize`, `mysql2`) és Angular 19 alapú frontend-et tartalmaz. A backend MySQL-t használ, így a szerver memóriája és I/O teljesítménye fontos.
+
+  Fejlesztői gép (lokális - Minimum / Ajánlott) 
+
+Minimum
+  - CPU: 2 mag (pl. i3 vagy hasonló)
+  - RAM: 8 GB
+  - Tároló: 256 GB SSD
+  - OS: Windows 10/11 vagy Linux (WSL2 használható)
+  - Megjegyzés: kényelmesen fut `ng serve` + Node szerver, de egyszerre futó böngésző, IDE memóriát eszik.
+
+Ajánlott
+  - CPU: 4 mag (i5 vagy jobb)
+  - RAM: 16 GB
+  - Tároló: 512 GB NVMe SSD
+  - Node: LTS verzió (ajánlott Node 18+), npm/yarn
+  - Előny: gyors build-ek (`ng build`) és több párhuzamos fejlesztői folyamat.
+
+Teszt 
+- CPU: 2–4 mag
+- RAM: 4–8 GB
+- Tároló: 50–100 GB SSD
+- DB: MySQL konténer vagy dedikált db instance (20–50 GB adat induláskor)
+
+Éles üzem (kisebb forgalom - pl. hobby / prototípus) 
+ Minimum
+  - CPU: 2 vCPU
+  - RAM: 4 GB
+  - Tároló: 50 GB SSD (adattároláshoz külön kötet: 20–50 GB)
+  - Hálózat: 1 Gbps hálózat javasolt
+  - További: Nginx reverse proxy, process manager (PM2 / systemd)
+Ajánlott
+  - CPU: 4 vCPU
+  - RAM: 8–16 GB
+  - Tároló: 100+ GB NVMe SSD (sebesség miatt)
+  - DB: dedikált MySQL (pl. 2 vCPU, 4–8 GB RAM) vagy felügyelt DB-szolgáltatás
+
+ Éles üzem (közepes / növekvő forgalom) 
+- Frontend + API réteg: 4–8 vCPU, 8–16 GB RAM (skálázható, load balancer)
+- DB: 4 vCPU, 16 GB RAM (InnoDB buffer pool méretezés)
+- Tárhely: NVMe SSD, RAID vagy felhőbeli IOPS garancia
+- Javaslat: horizontális skálázás backend rétegen, DB replikáció olvasási terheléshez
+
+ Nagy rendelkezésre állás / magas terhelés 
+- Több backend node + load balancer (Nginx/HAProxy)
+- Replikált MySQL (master + read replicas), automatikus mentések
+- Separate cache réteg (Redis) ~ memcached opció
+- Monitoring és autoscaling konfiguráció
+
+Részletes technikai javaslatok 
+- Tároló: NVMe/SSD kötelező éles környezetben I/O miatt. Logok és DB külön kötetre.
+- RAM a MySQL-hez: InnoDB esetén állítsa be az nnodb_buffer_pool_size-t a memóriának megfelelően (pl. 8 GB RAM esetén ~4–6 GB).
+- CPU: Node/Express CPU-bound feladatokat ritkán igényel, viszont sok egyidejű kérésnél több mag segít. 
+- Swap: legyen konfigurálva, de RAM hiánya esetén teljesítményromlás.
+- Biztonság / üzemeltetés: Nginx reverse proxy + TLS, logrotate, rendszeres DB backup (naponta), monitoring (Prometheus/Grafana vagy felhős megoldás).
+- Build folyamat: Angular buildnél nagy memóriát igényelhet a `ng build` — ajánlott a build szerveren 8–16 GB RAM.
+
+ Méretezési durva irányszámok (példa) 
+- ~100 egyidejű felhasználó (olvasás-domináns): 2–4 vCPU, 4–8 GB RAM
+- ~1000 egyidejű felhasználó: 4–8 vCPU, 8–16 GB RAM, DB skálázás (read replicas)
+- Adatmennyiség növekedése esetén: külön log/backup/archív tárolás, napi mentés
+
+Rövid teendők / javaslatok a bevezetéshez 
+1. Fejlesztéshez: 16 GB RAM ajánlott (snappy dev experience).  
+2. Éles prototípus: 4 vCPU, 8 GB RAM + dedikált MySQL (4 GB RAM) és NVMe SSD.  
+3. Monitoring, automatizált mentés és TLS bevezetése azonnal az élesítés előtt
+
+# 9.Szoftverkövetelmények
+
+- Operációs rendszer
+  - Minimum: Windows 10 / Ubuntu 20.04 / macOS 11
+  - Ajánlott: Windows 11 / Ubuntu 22.04 LTS / macOS 12+
+- Böngészők (támogatott)
+  - Google Chrome (legfrissebb 2 verzió)
+  - Microsoft Edge (legfrissebb 2 verzió)
+  - Mozilla Firefox (legfrissebb 2 verzió)
+  - Safari (macOS / iOS): legfrissebb verziók (tesztelés szükséges Angular Material komponensekhez)
+- Fejlesztői eszközök / futtatókörnyezet
+  - Node.js: LTS (18+ vagy 20+ ajánlott)
+  - npm: 8+ vagy Yarn
+  - Angular CLI: 19.x
+  - TypeScript: 5.6.x
+  - Git, VS Code (ajánlott)
+- Adatbázis és konténerek
+  - MySQL 8.x (InnoDB, utf8mb4)
+  - Docker (opcionális): MySQL konténer fejlesztéshez/staginghez ajánlott
+- Futtatás / üzemeltetés
+  - Process manager: PM2 vagy systemd
+  - Reverse proxy: Nginx (TLS termináció)
+  - HTTPS (TLS) kötelező éles környezetben
+
+# 10.Projekt elkészítése során alkalmazott fejlesztői eszközök
+
+# Backend fejlesztéshez használt eszközök
+
+## Visual Studio Code (VSC)
+A fejlesztési környezet, amely segítette a kódok megírását és kezelését.
+
+## XAMPP
+Biztosította a helyi adatbáziskörnyezetet, tartalmazza az Apache szervert és a MySQL adatbáziskezelőt.
+
+## JavaScript (JS)
+A szerveroldali logika megvalósításához használt fő programozási nyelv.
+
+## MySQL
+Az adatok tárolására használt relációs adatbázis-kezelő rendszer.
+
+## Express.js
+A Node.js alapú szerveroldali alkalmazásfejlesztéshez használt keretrendszer.
+
+## Node.js
+Lehetővé teszi a JavaScript futtatását szerveroldalon.
+
+# Frontend fejlesztéshez használt eszközök
+
+## Visual Studio Code (VSC)
+A frontend fejlesztés során használt kódfejlesztő környezet.
+
+## Angular
+A kliensoldali alkalmazás kialakításához használt keretrendszer.
+
+## Bootstrap 5
+Reszponzív megjelenítéshez és előre elkészített komponensek használatához.
+
+## CSS
+Az alkalmazás megjelenésének és stílusának kialakításához.
+
+## TypeScript
+Az Angular fejlesztéséhez használt programozási nyelv.
+
+## HTML
+Az alkalmazás szerkezetének kialakítására szolgáló jelölőnyelv.
+
+## Opera
+A fejlesztés és tesztelés során használt böngésző.
+
+## Angular Material
+Az alkalmazás felületén megjelenő ikonok és UI elemek megvalósításához.
+
+# Teszteléshez használt eszközök
+
+## Postman
+API-k tesztelésére, valamint a request és response üzenetek ellenőrzésére szolgáló eszköz.
+
+## Jasmine
+Angular projektek egységtesztelésére használt tesztelési keretrendszer.
+
+## Karma
+Az egységtesztek futtatásának automatizálására használt tesztfuttató eszköz.
+
+# Dokumentáció készítéséhez használt eszközök
+
+## Microsoft Word
+A fejlesztői és felhasználói dokumentáció, valamint egyéb szöveges anyagok szerkesztésére és formázására használt szövegszerkesztő.
+
+# Csapatmunkát segítő szoftverek
+
+## GitHub
+A projekt forráskódjának verziókezelésére és tárolására szolgáló platform.
+
+## Trello
+A projekt tervezéséhez és a feladatok nyomon követéséhez használt projektmenedzsment eszköz.
