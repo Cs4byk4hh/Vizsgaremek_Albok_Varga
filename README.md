@@ -255,32 +255,72 @@ Rövid teendők / javaslatok a bevezetéshez
 
 # 10.Projekt elkészítése során alkalmazott fejlesztői eszközök
 
-Backend fejlesztéshez használt eszközök:
-Visual Studio Code (VSC): fejlesztési környzete, ami segített a kódok megírásában, és kezelésében.
-XAMPP: Biztosította a helyi adatbázist, tartalmazza az Apache szervert, és a MySQL adatbáziskezelőt.
-JavaScript (JS): a szerveroldali logika megvalósításához használt fő programozási nyelv.
-MySQL: Az adatok tárolásához használt relációs adatbázis-kezelő rendszer.
-Express.js: A Node.js alapú szerveroldali alkalmazásfejlesztéshez használt keretrendszer.
-Node.js: Lehetővé teszi a JavaScript futtatását a szerveroldalon.
+# Backend fejlesztéshez használt eszközök
 
-Frontend fejlesztéshez használt eszközök:
-Visual Studio Code (VSC): A kód fejlesztő környezete.
-Angular: A kliensoldali alkalmazás kialakításához használt keretrendszer.
-Bootstrap5: Reszponzív megjelenítéshez, és előre kész komponensek alkalmazásához.
-CSS: Az alkalmazás stílusának kialakításához.
-TypeScript: Az Angular fejlesztéséhez használt programozási nyelv.
-HTML: AZ alkalmazás szerkezetének megvalósítására.
-Opera: A tesztelés, és fejlesztés során használt böngésző.
-Angular Material: Az alkalmazásban található ikonok kialakításához.
+## Visual Studio Code (VSC)
+A fejlesztési környezet, amely segítette a kódok megírását és kezelését.
 
-Teszteléshez használt eszközök:
-Postman: API-k teszteléséhez, request-ek, response-ok validálásához.
-Jasmine: Egység tesztelés Angular projektekhez.
-Karma: Egység tesztelés automatizálása.
+## XAMPP
+Biztosította a helyi adatbáziskörnyezetet, tartalmazza az Apache szervert és a MySQL adatbáziskezelőt.
 
-Dokumentáció készítéséhez használt eszközök:
-Microsoft Word: A fejlesztői, felhasználói dokumentáció, illetve egyéb szöveges anyagok szerkesztése és formázása.
+## JavaScript (JS)
+A szerveroldali logika megvalósításához használt fő programozási nyelv.
 
-Csapatmunkát segítő szoftverek:
-Github: A forráskód verzióihoz való hozzáférés.
-Trello: A projekt tervének, feladatok elkészítéséhez használt felvázolása.
+## MySQL
+Az adatok tárolására használt relációs adatbázis-kezelő rendszer.
+
+## Express.js
+A Node.js alapú szerveroldali alkalmazásfejlesztéshez használt keretrendszer.
+
+## Node.js
+Lehetővé teszi a JavaScript futtatását szerveroldalon.
+
+# Frontend fejlesztéshez használt eszközök
+
+## Visual Studio Code (VSC)
+A frontend fejlesztés során használt kódfejlesztő környezet.
+
+## Angular
+A kliensoldali alkalmazás kialakításához használt keretrendszer.
+
+## Bootstrap 5
+Reszponzív megjelenítéshez és előre elkészített komponensek használatához.
+
+## CSS
+Az alkalmazás megjelenésének és stílusának kialakításához.
+
+## TypeScript
+Az Angular fejlesztéséhez használt programozási nyelv.
+
+## HTML
+Az alkalmazás szerkezetének kialakítására szolgáló jelölőnyelv.
+
+## Opera
+A fejlesztés és tesztelés során használt böngésző.
+
+## Angular Material
+Az alkalmazás felületén megjelenő ikonok és UI elemek megvalósításához.
+
+# Teszteléshez használt eszközök
+
+## Postman
+API-k tesztelésére, valamint a request és response üzenetek ellenőrzésére szolgáló eszköz.
+
+## Jasmine
+Angular projektek egységtesztelésére használt tesztelési keretrendszer.
+
+## Karma
+Az egységtesztek futtatásának automatizálására használt tesztfuttató eszköz.
+
+# Dokumentáció készítéséhez használt eszközök
+
+## Microsoft Word
+A fejlesztői és felhasználói dokumentáció, valamint egyéb szöveges anyagok szerkesztésére és formázására használt szövegszerkesztő.
+
+# Csapatmunkát segítő szoftverek
+
+## GitHub
+A projekt forráskódjának verziókezelésére és tárolására szolgáló platform.
+
+## Trello
+A projekt tervezéséhez és a feladatok nyomon követéséhez használt projektmenedzsment eszköz.
