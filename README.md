@@ -256,31 +256,31 @@ Rövid teendők / javaslatok a bevezetéshez
 # 10.Projekt elkészítése során alkalmazott fejlesztői eszközök
 
 Backend fejlesztéshez használt eszközök:
-	Visual Studio Code (VSC): fejlesztési környzete, ami segített a kódok megírásában, és kezelésében.
-	XAMPP: Biztosította a helyi adatbázist, tartalmazza az Apache szervert, és a MySQL adatbáziskezelőt.
-	JavaScript (JS): a szerveroldali logika megvalósításához használt fő programozási nyelv.
-	MySQL: Az adatok tárolásához használt relációs adatbázis-kezelő rendszer.
-	Express.js: A Node.js alapú szerveroldali alkalmazásfejlesztéshez használt keretrendszer.
-	Node.js: Lehetővé teszi a JavaScript futtatását a szerveroldalon.
+Visual Studio Code (VSC): fejlesztési környzete, ami segített a kódok megírásában, és kezelésében.
+XAMPP: Biztosította a helyi adatbázist, tartalmazza az Apache szervert, és a MySQL adatbáziskezelőt.
+JavaScript (JS): a szerveroldali logika megvalósításához használt fő programozási nyelv.
+MySQL: Az adatok tárolásához használt relációs adatbázis-kezelő rendszer.
+Express.js: A Node.js alapú szerveroldali alkalmazásfejlesztéshez használt keretrendszer.
+Node.js: Lehetővé teszi a JavaScript futtatását a szerveroldalon.
 
 Frontend fejlesztéshez használt eszközök:
-	Visual Studio Code (VSC): A kód fejlesztő környezete.
-	Angular: A kliensoldali alkalmazás kialakításához használt keretrendszer.
-	Bootstrap5: Reszponzív megjelenítéshez, és előre kész komponensek alkalmazásához.
-	CSS: Az alkalmazás stílusának kialakításához.
-	TypeScript: Az Angular fejlesztéséhez használt programozási nyelv.
-	HTML: AZ alkalmazás szerkezetének megvalósítására.
-	Opera: A tesztelés, és fejlesztés során használt böngésző.
-	Angular Material: Az alkalmazásban található ikonok kialakításához.
+Visual Studio Code (VSC): A kód fejlesztő környezete.
+Angular: A kliensoldali alkalmazás kialakításához használt keretrendszer.
+Bootstrap5: Reszponzív megjelenítéshez, és előre kész komponensek alkalmazásához.
+CSS: Az alkalmazás stílusának kialakításához.
+TypeScript: Az Angular fejlesztéséhez használt programozási nyelv.
+HTML: AZ alkalmazás szerkezetének megvalósítására.
+Opera: A tesztelés, és fejlesztés során használt böngésző.
+Angular Material: Az alkalmazásban található ikonok kialakításához.
 
 Teszteléshez használt eszközök:
-	Postman: API-k teszteléséhez, request-ek, response-ok validálásához.
-	Jasmine: Egység tesztelés Angular projektekhez.
-	Karma: Egység tesztelés automatizálása.
+Postman: API-k teszteléséhez, request-ek, response-ok validálásához.
+Jasmine: Egység tesztelés Angular projektekhez.
+Karma: Egység tesztelés automatizálása.
 
 Dokumentáció készítéséhez használt eszközök:
-	Microsoft Word: A fejlesztői, felhasználói dokumentáció, illetve egyéb szöveges anyagok szerkesztése és formázása.
+Microsoft Word: A fejlesztői, felhasználói dokumentáció, illetve egyéb szöveges anyagok szerkesztése és formázása.
 
 Csapatmunkát segítő szoftverek:
-	Github: A forráskód verzióihoz való hozzáférés.
-	Trello: A projekt tervének, feladatok elkészítéséhez használt felvázolása.
+Github: A forráskód verzióihoz való hozzáférés.
+Trello: A projekt tervének, feladatok elkészítéséhez használt felvázolása.
