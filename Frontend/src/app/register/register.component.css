@@ -1,0 +1,228 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 120vh;
+  background-image: url('/assets/images/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+fieldset {
+  border-radius: 0.5rem;
+  box-shadow: 0 0 5px #ffffff,
+              0 0 15px #ffffff,
+              0 0 25px #ffffff,
+              0 0 45px #ffffff;
+  width: 400px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  backdrop-filter: blur(0.4rem);
+  -webkit-backdrop-filter: blur(0.4rem);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #ffffff;
+}
+
+legend {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.7rem;
+  color: #000;
+  -webkit-text-stroke: 1px #ffffff;
+  margin-bottom: 1rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5rem 0;
+  color: #ffffff;
+  font-style: italic;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  border: none;
+  border-bottom: 2px solid #ffffff;
+  width: 300px;
+  background-color: transparent;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #ffffff !important;
+  padding: 0.3rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  box-shadow: none;
+  color: #ffffff !important;
+  border-color: #000;
+  transition: 0.3s all ease;
+
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.center input[type="submit"] {
+  margin-top: 1.5rem;
+  padding: 0.7rem 2rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #000, #111827);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.center input[type="submit"]:hover {
+  background: linear-gradient(135deg, #1976d2, #ffffff);
+  transform: translateY(-2px);
+  color: #000;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+}
+
+.center input[type="submit"]:active {
+  transform: scale(0.97);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.login-redirect {
+  text-align: center;
+  margin-top: 1.5rem; 
+  font-size: 0.95rem;
+  color: #ffffff; 
+  font-style: italic;
+}
+
+.login-redirect a {
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-left: 5px;
+  transition: color 0.3s ease;
+}
+
+.login-redirect a:hover {
+  color: #c6a972; 
+  text-decoration: none;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background-color: #f8f9fa;
+  padding: 20px;
+}
+
+.profile-card {
+  width: 100%;
+  max-width: 500px; 
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+mat-card-header {
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+mat-card-title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.current-data {
+  background-color: #eef2f5; 
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.data-row {
+  display: flex;
+  justify-content: space-between; 
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.data-row:last-child {
+  border-bottom: none;
+}
+
+.label {
+  font-weight: 600;
+  color: #555;
+}
+
+.value {
+  font-weight: 400;
+  color: #000;
+}
+
+mat-divider {
+  margin: 20px 0 !important;
+}
+
+.modification-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modification-header h3 {
+  margin: 0;
+  color: #d32f2f; 
+  font-size: 18px;
+}
+
+.subtitle {
+  margin: 5px 0 0;
+  font-size: 13px;
+  color: #777;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.save-btn {
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+}

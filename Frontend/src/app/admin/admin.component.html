@@ -1,0 +1,29 @@
+<h2>Admin panel</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Név</th>
+      <th>Email</th>
+      <th>Felhasználónév</th>
+      <th>Role</th>
+      <th>Művelet</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.name }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.username }}</td>
+      <td>{{ user.role }}</td>
+      <td>
+        <button 
+          [disabled]="user.role === 'admin'" 
+          [style.opacity]="user.role === 'admin' ? 0.5 : 1"
+          (click)="deleteUser(user.id)">
+          Törlés
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

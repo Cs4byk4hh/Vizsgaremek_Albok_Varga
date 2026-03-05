@@ -1,0 +1,27 @@
+<header>
+  <div id="cssmenu">
+    <ul>
+      <li><a routerLink="/home" routerLinkActive="active"><span>Kezdőlap</span></a></li>
+
+      <li *ngIf="!authService.isLoggedIn()">
+        <a routerLink="/login" routerLinkActive="active"><span>Bejelentkezés</span></a>
+      </li>
+      <li *ngIf="!authService.isLoggedIn()">
+        <a routerLink="/register" routerLinkActive="active"><span>Regisztráció</span></a>
+      </li>
+
+      <li><a routerLink="/velemenyek" routerLinkActive="active"><span>Vélemények</span></a></li>
+      <li><a routerLink="/perfumes" routerLinkActive="active"><span>Parfümök</span></a></li>
+      <li><a routerLink="/kapcsolat" routerLinkActive="active"><span>Kapcsolat</span></a></li>
+
+      <li *ngIf="authService.isLoggedIn()">
+        <a routerLink="/profile" routerLinkActive="active"><span>Profil</span></a>
+      </li>
+
+      <li *ngIf="authService.isLoggedIn()">
+        <a href="#" (click)="authService.logout()"><span>Kijelentkezés</span></a>
+      </li>
+    </ul>
+  </div>
+</header>
+<router-outlet></router-outlet>

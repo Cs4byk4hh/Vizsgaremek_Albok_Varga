@@ -1,0 +1,69 @@
+<div class="container my-5">
+  <h2 class="mb-4 text-center">Kapcsolat</h2>
+
+  <div class="row mb-5 justify-content-center">
+    <div class="col-md-5 col-lg-4 mb-4" *ngFor="let admin of admins">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="card-title">{{ admin.name }}</h5>
+          <p class="card-text mb-1">
+            <strong>Email:</strong> {{ admin.email }}
+          </p>
+          <p class="card-text mb-0">
+            <strong>Telefon:</strong> {{ admin.phone }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-5 d-flex justify-content-center">
+    <iframe
+      width="100%"
+      max-width="800"
+      height="400"
+      src="https://maps.google.com/maps?q=47.55,19.22&t=&z=17&ie=UTF8&iwloc=&output=embed"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+  </div>
+</div>
+
+<footer class="modern-footer">
+  <div class="footer-container">
+    
+    <div class="footer-col brand-col">
+      <h3>Maison de Parfum</h3>
+      <p>Az emlékek illatokban élnek tovább. Fedezd fel a prémium parfümök világát, ahol a minőség találkozik az eleganciával.</p>
+    </div>
+
+    <div class="footer-col subscribe-col">
+      <h4>Maradjunk kapcsolatban</h4>
+      <p>Iratkozz fel, és értesülj elsőként az újdonságokról.</p>
+      
+      <div class="newsletter-box">
+        <input type="email" placeholder="Email címed...">
+        <button>→</button>
+      </div>
+
+      <div class="contact-row">
+        <span>info&#64;maisonparfum.hu</span> </div>
+
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 Maison de Parfum. Minden jog fenntartva.</p>
+    <div class="payment-methods">
+      <span>Adatvédelem</span>
+      <span>Süti beállítások</span>
+    </div>
+  </div>
+</footer>
