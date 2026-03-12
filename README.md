@@ -1,3 +1,15 @@
+
+<p align="center">
+ <img width="192" height="245" alt="image" src="https://github.com/user-attachments/assets/9e3b6ed2-c262-4da0-ba87-7068217d3209" />
+</p>
+
+<p align="center"> SZENT ISTVÁN KATOLIKUS TECHNIKUM ÉS GIMNÁZIUM </p>
+
+ <p align="center">Albók Csaba, Varga-Ádám Róbert <br> MAISON DE PARFUM <br> SZOFTVERFEJLESZTŐ ÉS-TESZTELŐ VIZSGAREMEK <br> Sátoraljaújhely, 2026</p>
+
+
+
+
 # 1.Témaválasztás indoklása
 
 A Maison De Parfum kizárólag parfümöket árusító webshop létrehozása több szempontból is
@@ -255,72 +267,72 @@ Rövid teendők / javaslatok a bevezetéshez
 
 # 10.Projekt elkészítése során alkalmazott fejlesztői eszközök
 
-# Backend fejlesztéshez használt eszközök
+## Backend fejlesztéshez használt eszközök
 
-## Visual Studio Code (VSC)
+Visual Studio Code (VSC)
 A fejlesztési környezet, amely segítette a kódok megírását és kezelését.
 
-## XAMPP
+XAMPP
 Biztosította a helyi adatbáziskörnyezetet, tartalmazza az Apache szervert és a MySQL adatbáziskezelőt.
 
-## JavaScript (JS)
+JavaScript (JS)
 A szerveroldali logika megvalósításához használt fő programozási nyelv.
 
-## MySQL
+MySQL
 Az adatok tárolására használt relációs adatbázis-kezelő rendszer.
 
-## Express.js
+Express.js
 A Node.js alapú szerveroldali alkalmazásfejlesztéshez használt keretrendszer.
 
-## Node.js
+Node.js
 Lehetővé teszi a JavaScript futtatását szerveroldalon.
 
-# Frontend fejlesztéshez használt eszközök
+## Frontend fejlesztéshez használt eszközök
 
-## Visual Studio Code (VSC)
+Visual Studio Code (VSC)
 A frontend fejlesztés során használt kódfejlesztő környezet.
 
-## Angular
+Angular
 A kliensoldali alkalmazás kialakításához használt keretrendszer.
 
-## Bootstrap 5
+Bootstrap 5
 Reszponzív megjelenítéshez és előre elkészített komponensek használatához.
 
-## CSS
+CSS
 Az alkalmazás megjelenésének és stílusának kialakításához.
 
-## TypeScript
+TypeScript
 Az Angular fejlesztéséhez használt programozási nyelv.
 
-## HTML
+HTML
 Az alkalmazás szerkezetének kialakítására szolgáló jelölőnyelv.
 
-## Opera
+Opera
 A fejlesztés és tesztelés során használt böngésző.
 
-## Angular Material
+Angular Material
 Az alkalmazás felületén megjelenő ikonok és UI elemek megvalósításához.
 
 # Teszteléshez használt eszközök
 
-## Postman
+Postman
 API-k tesztelésére, valamint a request és response üzenetek ellenőrzésére szolgáló eszköz.
 
-## Jasmine
+Jasmine
 Angular projektek egységtesztelésére használt tesztelési keretrendszer.
 
-## Karma
+Karma
 Az egységtesztek futtatásának automatizálására használt tesztfuttató eszköz.
 
 # Dokumentáció készítéséhez használt eszközök
 
-## Microsoft Word
+Microsoft Word
 A fejlesztői és felhasználói dokumentáció, valamint egyéb szöveges anyagok szerkesztésére és formázására használt szövegszerkesztő.
 
 # Csapatmunkát segítő szoftverek
 
-## GitHub
+GitHub
 A projekt forráskódjának verziókezelésére és tárolására szolgáló platform.
 
-## Trello
+Trello
 A projekt tervezéséhez és a feladatok nyomon követéséhez használt projektmenedzsment eszköz.
