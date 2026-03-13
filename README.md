@@ -335,5 +335,5 @@ GitHub
 A projekt forráskódjának verziókezelésére és tárolására szolgáló platform.
 
 Trello
-A projekt tervezéséhez és a feladatok nyomon követéséhez használt projektmenedzsment eszköz.
-Trello elérhetőség: https://trello.com/invite/b/68b6960f614caf75b734a01a/ATTIe41281a56bce94090904431d627d6be4C7D233A1/vizsgaremekalbokvarga
+A projekt tervezéséhez és a feladatok nyomon követéséhez használt projektmenedzsment eszköz. <br>
+Trello elérhetőség: <br> https://trello.com/invite/b/68b6960f614caf75b734a01a/ATTIe41281a56bce94090904431d627d6be4C7D233A1/vizsgaremekalbokvarga
